@@ -1,22 +1,14 @@
 // Filter array by type name
 
-// Step 1
-// Add 'use strict';
-// Change identifiers name
-// Add const and let
+// Step 2
+// Delete unnecessary variables
+// Delete unnecessary for loops, if statements
+// Use filter() method
 
 'use strict';
 
 const Filter = (arr, type) => {
-  const remove = [];
-  for (let C of arr) {
-    let x = arr.indexOf(C);
-    if (typeof arr[x] !== type) {
-      remove.unshift(x);
-    }
-  }
-  for (let x of remove) arr.splice(x, 1);
-  return arr;
+  return arr.filter(element => typeof element === type);
 };
 
 module.exports = Filter;

@@ -1,9 +1,8 @@
 // Get month number
 
-// Step 1
-// Add 'use strict';
-// Fix formatting
-// Add 'const' and 'let'
+// Step 2
+// Change identifiers name
+// Use toLowerCase() only once
 
 'use strict';
 
@@ -23,9 +22,10 @@ const Months = [
 ];
 
 const Month = (s) => {
-    const l = Months.length;
-    for (let i = 0; i < l; i++) {
-        if (s.toLowerCase().startsWith(Months[i])) return i + 1;
+    const mLength = Months.length;
+    const lowerCaseS = s.toLowerCase();
+    for (let i = 0; i < mLength; i++) {
+        if (lowerCaseS.startsWith(Months[i])) return i + 1;
     }
     return -1;
 };

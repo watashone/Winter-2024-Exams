@@ -1,21 +1,16 @@
 // Return an array without duplicates
 
-// Step 1
-// Fix formatting
-// Add const
-// Add 'use strict';
+// Step 2
+// Delete unnecessary if, else
+// Delete unnecessary for loop
+// Delete unnecessary identifiers
+// Use fill() method
 
 'use strict';
 
 const duplicate = (value, N) => {
     if (N <= 0) return [];
-    else {
-        const res = [];
-        for (let i = 0; i < N; i++) {
-            res[i] = value;
-        }
-        return res;
-    }
+    else return Array(N).fill(value);
 };
 
 module.exports = duplicate;

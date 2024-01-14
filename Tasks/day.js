@@ -1,11 +1,18 @@
 // Get day number
 
-let D = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+// Step 1
+// Add 'use strict';
+// Add const and let
+// Delete unnecessary identifiers
+// Change identifiers names
 
-_parse_day_ = (s) => {
-  let i;
-  for (i = 0; i < D.length; i++) {
-    if (s.startsWith(D[i].toLowerCase())) {
+'use strict';
+
+const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+const _parse_day_ = (s) => {
+  for (let i = 0; i < days.length; i++) {
+    if (s.startsWith(days[i].toLowerCase())) {
       return i + 1;
     }
   }

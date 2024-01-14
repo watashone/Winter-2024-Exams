@@ -1,34 +1,22 @@
 // Find longest string
 
-// Step 1
-// Add 'use strict';
-// Add let;
+// Step 2
+// Delete unnecessary blocks, if, variables
+// Change value variable
+// Add ternary operator
 
 'use strict';
 
 const longest = function (line = [], maxRandom = Math.random) {
-    let x = -1;
-    let s = ['Not found'][0][x++];
+    let x = 0;
+    let s = '';
     for (let i of line) {
-        {
-            {
-                if (i.length > x) {
-                    x = i.length;
-                } else {
-                    i = 0;
-                }
-            }
-            {
-                if (i.length >= x) {
-                    s = i;
-                } else {
-                    i = -1;
-                }
-            }
+        if (i.length > x) {
+            x = i.length;
+            s = i;
         }
     }
-    Object.assign(line, {length: s.length});
-    return s;
+    return s.length > 0 ? s : 'Not found';
 };
 
 module.exports = longest;

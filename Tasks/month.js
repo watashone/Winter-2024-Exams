@@ -1,8 +1,11 @@
 // Get month number
 
-// Step 2
-// Change identifiers name
-// Use toLowerCase() only once
+// Step 3
+// Remove unnecessary variable
+// Remove unnecessary for loop
+// Add const variable
+// Use findIndex() instead
+// Use ternary operator
 
 'use strict';
 
@@ -22,12 +25,9 @@ const Months = [
 ];
 
 const Month = (s) => {
-    const mLength = Months.length;
     const lowerCaseS = s.toLowerCase();
-    for (let i = 0; i < mLength; i++) {
-        if (lowerCaseS.startsWith(Months[i])) return i + 1;
-    }
-    return -1;
+    const index = Months.findIndex(month => lowerCaseS.startsWith(month));
+    return index !== -1 ? index + 1 : index;
 };
 
 module.exports = Month;
